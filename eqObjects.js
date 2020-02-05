@@ -34,7 +34,7 @@ const eqObjects = function(object1, object2) {
           return false;
         }
       } else if (object1[key] !== object2[key]) {
-        return false
+        return false;
       }
     }
   } else {
