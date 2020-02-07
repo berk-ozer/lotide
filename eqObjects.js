@@ -23,7 +23,7 @@ const eqArrays = function(arr1, arr2) {
 };
 
 // ACTUAL FUNCTION
-const eqObjects = function(object1, object2) { 
+const eqObjects = function(object1, object2) {
   const object1Keys = Object.keys(object1);
   const object2Keys = Object.keys(object2);
 
@@ -70,7 +70,7 @@ const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, dc), true);
 assertEqual(eqObjects(cd, cd2), false);
 
-console.log('\nNESTED OBJECT TESTS')
+console.log('\nNESTED OBJECT TESTS');
 
 // NESTED OBJECT TESTS
 
