@@ -1,9 +1,16 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-const result = tail([1, 2, 3, 4]);
-assertEqual(result.length, 3);
-assertEqual(result[0], 2);
+describe('#tail', () => {
+  it('should return [2, 3, 4] when passed [1, 2, 3, 4]', () => {
+    assert.deepEqual(tail([1, 2, 3, 4]), [2, 3, 4]);
+  })
 
-console.log(tail(['hi']));
-console.log(tail([]));
+  it("should return [] when passed ['hi']", () => {
+    assert.deepEqual(tail(['hi']), []);
+  })
+
+  it('should return [] when passed []', () => {
+    assert.deepEqual(tail([]), []);
+  })
+})
