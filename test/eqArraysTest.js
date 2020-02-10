@@ -1,17 +1,20 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const eqArrays = require('../eqArrays');
 
-console.log('NON NESTED ARRAY TEST');
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
-assertEqual(eqArrays(['1', '2', '3'], ['1', '2', '3']), true);
-assertEqual(eqArrays(['1', '2', '3'], ['1', '2', 3]), false);
-assertEqual(eqArrays(['hello', false, 42], ['hello', false, 42]), true);
-assertEqual(eqArrays([false, true], ['', 1]), false);
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), false);
+describe('#eqArrays', () => {
+  it("should return true when passed [1, 2, 3] and [1, 2, 3]", () => {
+    assert.isTrue(eqArrays([1, 2, 3], [1, 2, 3]));
+  })
 
-console.log('\nNESTED ARRAY TEST');
-assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true);
-assertEqual(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false);
-assertEqual(eqArrays([[2, 3], [4]], [[2, 3], 4]), false);
-assertEqual(eqArrays([[[[[5]]]]], [[[[[5]]]]]), true);
+  it("should return false when passed ['1', '2', '3'] and ['1', '2', 3]", () => {
+    assert.isFalse(eqArrays(['1', '2', '3'], ['1', '2', 3]));
+  })
+  
+  it("should return true when passed [[2, 3], [4]] and [[2, 3], [4]]", () => {
+    assert.isTrue(eqArrays([[2, 3], [4]], [[2, 3], [4]]));
+  })
+
+  it("should return false when passed [[2, 3], [4]] and [[2, 3], 4]", () => {
+    assert.isFalse(eqArrays([[2, 3], [4]], [[2, 3], 4]));
+  })
+})
