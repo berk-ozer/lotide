@@ -44,3 +44,5 @@ assertArraysEqual(flatten([1, 2, [3, 4]]), [1, 2, 3, 4]);
 assertArraysEqual(flatten([1, 2, 'yes']), [1, 2, 'yes']);
 assertArraysEqual(flatten([45, [60], 34, 'hallo']), [45, 60, 34, 'hallo']);
 assertArraysEqual(flatten([true, [false, 34], 'ok', ['maybe', 3, 5]]), [true, false, 34, 'ok', 'maybe', 3, 5]);
+
+module.exports = flatten;

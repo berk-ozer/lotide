@@ -39,3 +39,5 @@ const soccerTeamsFromCountry = {
 assertEqual(findKeyByValue(soccerTeamsFromCountry, 'Liverpool'), 'england');
 assertEqual(findKeyByValue(soccerTeamsFromCountry, 'Galatasaray'), 'turkey');
 assertEqual(findKeyByValue(soccerTeamsFromCountry, 'Ajax'), undefined);
+
+module.exports = findKeyByValue;

@@ -48,3 +48,5 @@ const confused = [true, false, true];
 const results3 = map(confused, (confusion) => !confusion);
 
 assertArraysEqual(results3, [false, true, false]);
+
+module.exports = map;

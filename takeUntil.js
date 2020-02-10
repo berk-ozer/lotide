@@ -47,3 +47,5 @@ const sentence = ['Hi', 'there', 'Mr', 'Person', 'you', 'are', 'silly'];
 const result2 = takeUntil(sentence, word => word === 'you');
 
 assertArraysEqual(result2, ['Hi', 'there', 'Mr', 'Person']);
+
+module.exports = takeUntil;

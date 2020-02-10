@@ -33,3 +33,5 @@ const result2 = countLetters('my name is berk');
 assertEqual(result2['m'], 2);
 assertEqual(result2['y'], 1);
 assertEqual(result2['j'], undefined);
+
+module.exports = countLetters;

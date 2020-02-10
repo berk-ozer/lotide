@@ -45,3 +45,5 @@ assertArraysEqual(without([true, 'is it', 42, undefined], [undefined, 'is it']),
 const originalArray = [11, 22, 33];
 without(originalArray, [11, 22]);
 assertArraysEqual(originalArray, [11, 22, 33]);
+
+module.exports = without;

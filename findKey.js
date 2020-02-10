@@ -48,3 +48,5 @@ const nameLanguage = {
 };
 
 assertEqual(findKey(nameLanguage, language => language === 'russian'), undefined);
+
+module.exports = findKey;
