@@ -1,16 +1,14 @@
 {
-  "name": "lotide",
+  "name": "@berk-ozer/lotide",
   "version": "1.0.0",
-  "description": "A clone of the lodash library",
+  "description": "A mini clone of the lodash library",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "chai": "^4.2.0"
-  },
   "devDependencies": {
-    "mocha": "^7.0.1"
+    "mocha": "^7.0.1",
+    "chai": "^4.2.0"
   },
   "scripts": {
     "test": "mocha"
@@ -19,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/berk-ozer/lotide.git"
   },
-  "author": "berk ozer",
+  "author": "berk-ozer",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/berk-ozer/lotide/issues"
