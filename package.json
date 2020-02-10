@@ -2,7 +2,7 @@
   "name": "lotide",
   "version": "1.0.0",
   "description": "A clone of the lodash library",
-  "main": "head.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
